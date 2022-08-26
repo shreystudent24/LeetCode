@@ -6,12 +6,12 @@ public:
         
         int m = 1;
         for(int i = 0; i<30;i++){
-            string temp = to_string(1<<i);
+            string temp = to_string(m);
             sort(temp.begin(),temp.end());
             if(given==temp){
                 return true;
             }
-           // m=m*2;
+            m=m*2;
         }
         return false;
     }
