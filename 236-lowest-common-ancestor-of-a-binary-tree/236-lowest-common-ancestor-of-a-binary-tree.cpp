@@ -19,7 +19,8 @@ public:
         if(left && right)return root;
         if(!left && !right)return NULL;
 
-        return left!=NULL? left : right;
+        if(left)return left;
+        return right;
 
     }
 };
