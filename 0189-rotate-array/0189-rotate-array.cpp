@@ -4,8 +4,8 @@ public:
         k = k%nums.size();
         
         
-        reverse(nums.begin(),nums.end());
-        reverse(nums.begin(), nums.begin()+k);
-        reverse(nums.begin()+k, nums.end());
+        reverse(nums.begin(),nums.end()); //Reverse Full Array
+        reverse(nums.begin(), nums.begin()+k); //Reverse first part
+        reverse(nums.begin()+k, nums.end()); //Reverse Second part
     }
 };
