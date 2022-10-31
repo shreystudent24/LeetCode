@@ -7,12 +7,12 @@ public:
         
         long long result = 1;
         long i = 1;
-        long ans = 1;
+       // long ans = 1;
         while(result<=x){
             i++;
             result = i*i;
-            ans = i;
+           // ans = i;
         }
-        return ans-1;
+        return i-1;
     }
 };
