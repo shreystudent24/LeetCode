@@ -8,8 +8,10 @@ public:
            
             if(nums[left] != nums[right]){
                left++;
+                //if nums are not equal
            }
             
+            //If nums are equal
                nums[left] = nums[right];
            }
              return left+1;
