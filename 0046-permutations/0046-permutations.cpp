@@ -17,13 +17,9 @@ public:
                 
         }
     }
-    
-    
-    
-    vector<vector<int>> permute(vector<int>& nums) {
-        
+
+    vector<vector<int>> permute(vector<int>& nums) { 
         help(nums, 0, nums.size()-1);
-        return ans;
-        
+        return ans;  
     }
 };
