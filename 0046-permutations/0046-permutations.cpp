@@ -1,25 +1,26 @@
 class Solution {
 public:
-    vector<vector<int>> ans; //Declare Globally
+    vector<vector<int>> ans;
     
-    
-    //Helper Function
-    void help(vector<int>&nums, int start, int end){
-        if(start == end){
+    void help(vector<int>&nums, int st, int end){
+       
+        //Base Case
+        if(st==end){
             ans.push_back(nums);
             return;
         }
         
-        for(int j = start; j<=end; j++){
-            swap(nums[start], nums[j]);
-            help(nums, start+1, end);
-            swap(nums[start], nums[j]);
-                
+        for(int j = st; j<=end; j++){
+            swap(nums[st],nums[j]);
+            help(nums,st+1,end);
+            swap(nums[st],nums[j]);
+            
         }
+        
     }
-
-    vector<vector<int>> permute(vector<int>& nums) { 
-        help(nums, 0, nums.size()-1);
-        return ans;  
+    
+    vector<vector<int>> permute(vector<int>& nums) {
+        help(nums,0,nums.size()-1);
+        return ans;
     }
 };
